@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Grid, GridItem, Box, Badge, Image, Center, Stack} from '@chakra-ui/react'
+import {Grid, GridItem, Box, Badge, Image, Center, Stack, useColorMode} from '@chakra-ui/react'
 import { motion } from "framer-motion";
 
 
@@ -7,7 +7,12 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
     
-    
+  const { colorMode, toggleColorMode } = useColorMode();
+	const bgColor = {
+	  light: "rgba(204, 214, 224, 0.63)",
+	  dark: "rgba(74, 85, 104, 0.80)",
+	};
+	const textColor = { light: "black", dark: "gray.100" };
     return (
         
     
@@ -42,7 +47,7 @@ export default function Experience() {
             }
 
         }}>
-            <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden">
+            <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden" color={textColor[colorMode]} bgColor={bgColor[colorMode]}>
               <Center>
               <Image mt="2" boxSize="36" borderRadius="full"  src="./1.jpg" />
               </Center>
@@ -67,7 +72,7 @@ export default function Experience() {
                   Manager of Global Tech
                 </Box>
                 <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -78,7 +83,7 @@ export default function Experience() {
                     FleetUp - San Jose, CA / Glendale, CA
                   </Box>
                   <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -126,7 +131,7 @@ export default function Experience() {
             }
 
         }}>
-            <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden">
+            <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden" color={textColor[colorMode]} bgColor={bgColor[colorMode]}>
               <Center>
               <Image mt="2" boxSize="36" borderRadius="full"  src="./0.jpg" />
               </Center>
@@ -166,7 +171,7 @@ export default function Experience() {
                   Technical Researcher I
                 </Box>
                 <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -177,7 +182,7 @@ export default function Experience() {
                     Netflix - Salt Lake City, Utah
                   </Box>
                   <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -226,7 +231,7 @@ export default function Experience() {
             }
 
         }}>
-               <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden">
+               <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden" color={textColor[colorMode]} bgColor={bgColor[colorMode]}>
               <Center>
               <Image mt="2" boxSize="36" borderRadius="full"  src="./2.jpg" />
               </Center>
@@ -263,7 +268,7 @@ export default function Experience() {
                   ITC
                 </Box>
                 <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -274,7 +279,7 @@ export default function Experience() {
                     La County, Department of Public Works - Los Angeles, CA
                   </Box>
                   <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -325,7 +330,7 @@ export default function Experience() {
             }
 
         }}>
-            <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden">
+            <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden" color={textColor[colorMode]} bgColor={bgColor[colorMode]}>
               <Center>
               <Image mt="2" boxSize="36" borderRadius="full"  src="./3.jpg" />
               </Center>
@@ -362,7 +367,7 @@ export default function Experience() {
                   Lead Web Developer
                 </Box>
                 <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -373,7 +378,7 @@ export default function Experience() {
                     RC Hair La - Los Angeles, CA
                   </Box>
                   <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -424,7 +429,7 @@ export default function Experience() {
             }
 
         }}>
-              <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden">
+              <Box maxW="lg" maxH="md" boxShadow="lg" bg="gray.200" rounded="20px" borderWidth="1px" borderRadius="lg" overflow="hidden" color={textColor[colorMode]} bgColor={bgColor[colorMode]}>
               <Center>
               <Image mt="2" boxSize="36" borderRadius="full"  src="./4.jpg" />
               </Center>
@@ -464,7 +469,7 @@ export default function Experience() {
                   Full Stack Immersive - Fellow
                 </Box>
                 <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"
@@ -475,7 +480,7 @@ export default function Experience() {
                     General Assembly- Los Angeles, CA
                   </Box>
                   <Box
-                    color="gray.500"
+                    color={textColor[colorMode]}
                     fontWeight="light"
                     // letterSpacing="wide"
                     fontSize="xs"

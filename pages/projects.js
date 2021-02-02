@@ -1,17 +1,14 @@
 import React from 'react'
 import Projects from '../components/Projects'
 import { motion } from "framer-motion";
+import { Box } from '@chakra-ui/react';
 
-let transition = { duration: 0.6, ease: [0.215, 0.61, 0.355, 1] };
+
 
 export default function projects() {
     return (
-        <motion.div
-      exit={{ scale: 0.8, x: "-100%" }}
-      initial={{ scale: 0.8, x: "0%" }}
-      animate={{ scale: 1, x: "0" }}
-      transition={transition}>
+        <Box bgImage="url(./whitemarb.jpg)" bgSize="cover" minH="100%" minW="1024px" w="100%" h="auto" position="fixed" overflowX="scroll"  top="0" right="0">
         <Projects /> 
-        </motion.div>
+        </Box>
     )
 }

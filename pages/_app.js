@@ -12,24 +12,38 @@ import {
 	  
 } from '@chakra-ui/react';
 import Navbar from '../components/Navbar';
-import {AnimatePresence} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import theme from '../styles/theme'
 
 
 
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router}) {
+	
 	return (
     
       
 		<ChakraProvider>
 			
 				<Navbar />
-				<AnimatePresence exitBeforeEnter initial={false}>
-						
+				
+						<motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
+							pageInitial: {
+								scale: 0.8,
+								opacity:0,
+								x: -250
+							},
+							pageAnimate: {
+								scale:1,
+								opacity:1,
+								x:0,
+								
+							},
+							
+						}}>
 						<Component {...pageProps} />
-						
-					</AnimatePresence>
+						</motion.div>
+					
 
 		</ChakraProvider>
     

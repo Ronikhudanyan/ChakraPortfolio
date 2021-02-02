@@ -4,17 +4,56 @@ import { motion,  AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { Box, Badge, Center, Image, Stack, Button, Link, Grid, GridItem, Text, Tooltip, Flex } from "@chakra-ui/react";
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
+// const onLoadVars = {
+//   initial: {
+// 	  scale: .8,
+//               opacity:0,
+//               x:-250,
+//               delayChildren: 0.3,
+	  
+// 	},
+  
+// 	animate: {
+//     scale:1,
+//     opacity:1,
+//     x: -1,
+//     transition: {
+//       delay: .4
+    
+    
+// 	  }
+// 	}
+// }
+
+// const ulvars = {
+// 	open: {
+// 	  transition: { staggerChildren: 0.07, delayChildren: 0.5 }
+// 	},
+// 	closed: {
+// 	  transition: { staggerChildren: 0.05, staggerDirection: -1 }
+// 	}
+//   };
+
+// const bounceTransition = {
+//   y: {
+//     duraction: .4,
+//     yoyo: Infinity,
+//     ease: "easeOut"
 
 
+//   }
+// }
 
 export default function Projects() {
   return (
         <AnimateSharedLayout>
         <Flex ml="20"  paddingTop="20" justifyContent='center' alignItems='center'>
-      <motion.div layout initial={{ borderRadius: 25 }}>
+        <motion.div layout initial={{borderRadius:25}}>
+      {/* <motion.div layout initial={"initial"} animate={"animate"} varients={onLoadVars}> */}
         <Grid templateRows="repeat(1, 1fr)" templateColumns="repeat(3, 1fr)" gap={4}>
           <GridItem colStart={1}>
           <motion.div whileHover={{ scale: 1.1 }}>
+          {/* <motion.div whileHover={{ scale: 1.1 }} initial={"initial"} animate={"animate"} variants={{onLoadVars}}> */}
           <Hool />
           </motion.div> 
           </GridItem> 
@@ -36,7 +75,11 @@ export default function Projects() {
   );
 }
 
-
+const spring = {
+  type: "spring",
+  damping: 10,
+  stiffness: 100
+}
 
 function Hool() {
   const [isHoolOpen, setIsHoolOpen] = useState(false);
@@ -46,7 +89,7 @@ function Hool() {
   return (
     <motion.div layout onClick={toggleHoolOpen} initial={{ borderRadius: 10 }}>
        <Box> 
-      <motion.div>
+      <motion.div transition={{ ease: "easeIn", yoyo: 2, duration: 0.4 }} animate={{y: ["-200%", "0%" ]}}>
         <Center>
         <Tooltip label="HOOL Armenia" placement="top" colorScheme="twitter" mb="1" >
       <Image  mt="2" boxSize="48" borderRadius="full"  src="./yerevan.jpg" layout/>
@@ -182,7 +225,7 @@ function HoolContent() {
     return (
       <motion.div  layout onClick={toggleFCOpen} initial={{ borderRadius: 10 }}>
         <Box> 
-      <motion.div>
+        <motion.div transition={{ ease: "easeIn", yoyo: 2, duration: 0.4, delay: 0.2 }} animate={{y: ["-200%", "0%" ]}}>
         <Center>
         <Tooltip label="Find(Career)" placement="top" colorScheme="twitter" mb="1" >
       <Image mt="2" boxSize="48" borderRadius="full"  src="./findcsm.jpg" layout/>
@@ -318,7 +361,7 @@ function HoolContent() {
         return (
           <motion.div  layout onClick={toggleTronOpen} initial={{ borderRadius: 10 }}>
             <Box> 
-            <motion.div>
+            <motion.div transition={{ ease: "easeIn", yoyo: 2, duration: 0.4, delay:0.3 }} animate={{y: ["-200%", "0%" ]}}>
             <Center>
             <Tooltip label="Tron Run" placement="top" colorScheme="twitter" mb="1" >
             <Image mt="2" boxSize="48" borderRadius="full"  src="./tronsm.jpg" layout />

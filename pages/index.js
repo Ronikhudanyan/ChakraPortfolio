@@ -49,7 +49,7 @@ export default function Home() {
       </Head>
       
       <Box bgImage="url(./whitemarb.jpg)" bgSize="cover" minH="120%" minW="1024px" w="100%" h="auto"  backgroundRepeat="repeat" position="absolute" overflowX="scroll" top="0" right="0">
-      <Scroll />
+      
       <main className={styles.main}>
       
   

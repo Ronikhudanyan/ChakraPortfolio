@@ -1,4 +1,5 @@
 // import '../styles/globals.css'
+
 import {
 	Flex,
 	ChakraProvider,
@@ -49,5 +50,7 @@ function MyApp({ Component, pageProps, router}) {
     
 	);
 }
+
+
 
 export default MyApp

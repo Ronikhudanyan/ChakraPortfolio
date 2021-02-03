@@ -10,7 +10,7 @@ import { MoonIcon, SunIcon} from '@chakra-ui/icons'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {motion} from 'framer-motion'
-
+import Scroll from '../components/Scroll'
 
 
 const sidebar = {
@@ -186,6 +186,7 @@ const sidebar = {
 					  >
 						Change Color Mode
 					  </IconButton>
+					  
 					</Center>
 				  </Box>
 				</motion.div>

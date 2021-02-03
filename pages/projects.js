@@ -2,7 +2,7 @@ import React from 'react'
 import Projects from '../components/Projects'
 import { motion } from "framer-motion";
 import { Box } from '@chakra-ui/react';
-
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 
 
 export default function projects() {
